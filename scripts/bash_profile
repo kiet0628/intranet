@@ -13,11 +13,13 @@ export TC=apache-tomcat-9.0.75
 set -o vi
 alias ls='ls -CF --color'
 cd() { builtin cd "$@" && ls -CF --color; }
+alias i='cd $PRJ/'
 alias t='cd $PRJ/apache-tomcat-9.0.75/bin'
 alias scr='cd $PRJ/scripts'
 alias web='cd $PRJ/$TC/webapps'
 alias st='pushd $PRJ/apache-tomcat-9.0.75/bin; ./startup.sh; popd'
 alias kt='pushd $PRJ/apache-tomcat-9.0.75/bin; ./shutdown.sh; popd'
 alias rt='kt; rm -rf /data/intranet/apache-tomcat-9.0.75/logs/*; echo "....RESTART TC....."; sleep 3; st'
+alias gits='git status'
 
 
