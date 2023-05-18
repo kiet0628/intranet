@@ -16,15 +16,17 @@ pushd $PRJ
 	rm -rf wiki
 	mkdir -p wiki	
 	cd wiki
-	tar -xvf $DOWNLOADS/wiki-js.tar.gz
+	tar -xf $DOWNLOADS/wiki-js.tar.gz
 	cp $PRJ/config/config.*  .
 
 	echo "............Install Node Server."
  	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
    	. ~/.nvm/nvm.sh
    	nvm install --lts
+
 	# downgrade to nvm version 16
 	nvm install 16
+	echo "!!!Must run!!!>> 'nvm install 16' as this is env context; need to run outside of script."
    	# node server  , this command to start
 
 
