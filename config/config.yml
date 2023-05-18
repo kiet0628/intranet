@@ -28,7 +28,7 @@ db:
   port: 5432
   user: postgres
   pass: sencura2468
-  db: wiki
+  db: intranet
   ssl: false
 
   # Optional - PostgreSQL / MySQL / MariaDB only:
