@@ -12,6 +12,8 @@ pushd $DOWNLOADS
   fi
 popd
 
+# =======================================================================
+# Install wiki.js
 pushd $PRJ
 	rm -rf wiki
 	mkdir -p wiki	
@@ -32,6 +34,29 @@ pushd $PRJ
 
 
 popd
+
+# =======================================================================
+# Install Tomcat and wikijsp
+pushd $DOWNLOADS
+  if [ ! -f "apache-tomcat-9.0.75.tar.gz" ]; then
+	wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.75/bin/apache-tomcat-9.0.75.tar.gz
+  fi
+  if [ ! -f "JSPWiki.war" ]; then
+	wget https://downloads.apache.org/jspwiki/2.11.3/binaries/webapp/JSPWiki.war
+  fi
+popd
+
+pushd $PRJ
+	tar -xvf $DOWNLOADS/apache-tomcat-9.0.75.tar.gz
+	rm -rf $TC/webapps/docs
+	rm -rf $TC/webapps/examples
+	rm -rf $TC/webapps/host-*
+	rm -rf $TC/webapps/manager
+	rm -rf $TC/webapps/ROOT
+
+	cp $DOWNLOADS/JSPWiki.war $TC/webapps/ROOT.war
+popd
+
 
 
 echo ".................Completed Install SW."
