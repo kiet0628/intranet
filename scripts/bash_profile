@@ -13,7 +13,9 @@ export TC=apache-tomcat-9.0.75
 set -o vi
 alias ls='ls -CF --color'
 cd() { builtin cd "$@" && ls -CF --color; }
+
 alias i='cd $PRJ/'
+alias s='cd $PRJ/scripts'
 alias w='cd $PRJ/wiki'
 alias t='cd $PRJ/apache-tomcat-9.0.75/bin'
 alias scr='cd $PRJ/scripts'
