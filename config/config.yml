@@ -24,7 +24,8 @@ db:
   type: postgres
 
   # PostgreSQL / MySQL / MariaDB / MS SQL Server only:
-  host: sencuradevdb.cnl05aa1bkf9.us-east-1.rds.amazonaws.com
+  #host: sencuradevdb.cnl05aa1bkf9.us-east-1.rds.amazonaws.com
+  host: securadev.cnl05aa1bkf9.us-east-1.rds.amazonaws.com
   port: 5432
   user: postgres
   pass: sencura2468
