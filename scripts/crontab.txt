@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# * 19 * * * /data/intranet/scripts/systemShutdown.sh > $HOME/systemShutdown.log
+# * 24 * * * /data/intranet/scripts/systemShutdown.sh > $HOME/systemShutdown.log
+
+. /home/ec2-user/.bash_profile
+
+pushd $PRJ/scripts
+	./stopWiki.sh
+popd 
+sleep 2
+
+
+date >> $HOME/shutdown.log
+sudo shutdown -h
+
