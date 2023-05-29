@@ -24,6 +24,6 @@ alias st='pushd $PRJ/apache-tomcat-9.0.75/bin; ./startup.sh; popd'
 alias kt='pushd $PRJ/apache-tomcat-9.0.75/bin; ./shutdown.sh; popd'
 alias rt='kt; rm -rf /data/intranet/apache-tomcat-9.0.75/logs/*; echo "....RESTART TC....."; sleep 3; st'
 alias gits='git status'
-alias sq='psql --host=securadev.cnl05aa1bkf9.us-east-1.rds.amazonaws.com --username=postgres --port=5432'
+alias sq='psql --host=wikidb.cnl05aa1bkf9.us-east-1.rds.amazonaws.com --username=postgres --port=5432'
 
 

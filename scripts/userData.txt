@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo ".....From User Data" > userdata.log
+
+sudo yum install git -y
+
+sudo mkdir -p /data; sudo chown ec2-user /data; 
+cd /data; 
+
+git clone https://github.com/kiet0628/intranet.git >> userdata.log
+
+cd intranet/scripts
+./installAll.sh >> userdata.log
+
+echo ".....End User Data" >> userdata.log
