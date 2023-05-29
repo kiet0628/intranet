@@ -13,5 +13,7 @@ source ~/.bash_profile
 
 sudo yum update -y
 
+crontab $PRJ/scripts/crontab.txt
+
 echo "Completed Install Env."
 

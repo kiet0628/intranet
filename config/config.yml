@@ -25,11 +25,11 @@ db:
 
   # PostgreSQL / MySQL / MariaDB / MS SQL Server only:
   #host: sencuradevdb.cnl05aa1bkf9.us-east-1.rds.amazonaws.com
-  host: securadev.cnl05aa1bkf9.us-east-1.rds.amazonaws.com
+  host: wikidb.cnl05aa1bkf9.us-east-1.rds.amazonaws.com
   port: 5432
   user: postgres
-  pass: sencura2468
-  db: wikidev
+  pass: sencuraprod
+  db: wikidb
   ssl: false
 
   # Optional - PostgreSQL / MySQL / MariaDB only:
