@@ -3,12 +3,12 @@
 sudo -u ec2-user -i <<'EOF'
 echo ".....From User Data" > $HOME/userdata.log
 
-sudo yum install git -y
+sudo yum install git -y  >> $HOME/userdata.log
 
-sudo mkdir -p /data; sudo chown ec2-user /data; 
+sudo mkdir -p /data; sudo chown ec2-user /data; >>  $HOME/userdata.log
 cd /data; 
 
-git clone https://github.com/kiet0628/intranet.git >> userdata.log
+git clone https://github.com/kiet0628/intranet.git >>  $HOME/userdata.log
 
 cd intranet/scripts
 ./installAll.sh >> $HOME/userdata.log

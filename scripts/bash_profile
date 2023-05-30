@@ -8,7 +8,7 @@ fi
 # User specific environment and startup programs
 export PRJ=/data/intranet
 export TC=apache-tomcat-9.0.75
-export PDB=wikidb.cnl05aa1bkf9.us-east-1.rds.amazonaws.com
+export HOST_DB=wikidb.cnl05aa1bkf9.us-east-1.rds.amazonaws.com
 
 
 set -o vi
@@ -26,6 +26,6 @@ alias kt='pushd $PRJ/apache-tomcat-9.0.75/bin; ./shutdown.sh; popd'
 alias rt='kt; rm -rf /data/intranet/apache-tomcat-9.0.75/logs/*; echo "....RESTART TC....."; sleep 3; st'
 alias gits='git status'
 alias gitd='git diff'
-alias sq='psql --host=$PDB --username=postgres --port=5432'
+alias sq='psql --host=$HOST_DB --username=postgres --port=5432'
 
 
