@@ -1,6 +1,6 @@
 
-* 19 * * * bash /data/intranet/scripts/systemShutdown.sh > $HOME/systemShutdown.log
-59 23 * * * bash /data/intranet/scripts/systemShutdown.sh > $HOME/systemShutdown.log
+#* 19 * * * bash /data/intranet/scripts/systemShutdown.sh > $HOME/systemShutdown.log
+59 22 * * * bash /data/intranet/scripts/systemShutdown.sh > $HOME/systemShutdown.log
 
 @reboot date >> ~/rebootDate.txt;  cd /data/intranet/scripts/; ./startWiki.sh > /data/intranet/wiki/wiki.log
 
